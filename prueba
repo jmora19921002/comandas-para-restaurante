@@ -1,0 +1,13 @@
+import pymysql
+
+try:
+    conn = pymysql.connect(
+        host="localhost",
+        user="root",
+        password="TURING",
+        database="comandas"
+    )
+    print("✅ Conexión exitosa a MySQL 8.0")
+    conn.close()
+except Exception as e:
+    print(f"❌ Error de conexión: {e}")
